@@ -1,13 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Menu } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-sm transition-all duration-300">
-      {/* Top Emergency Bar */}
-
-
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-24">
           {/* Logo Area */}
@@ -43,21 +45,62 @@ export default function Navbar() {
 
           {/* CTA & Mobile Toggle */}
           <div className="flex items-center gap-5">
-            {/* <Link
-              href="/appointments"
-              className="hidden md:inline-flex items-center justify-center bg-secondary hover:opacity-90 text-white px-8 py-3 rounded-full font-bold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 duration-300"
-            >
-              Book Appointment
-            </Link> */}
             <a href="tel:+919999999999" className="md:hidden text-primary bg-blue-50 p-2 rounded-full">
               <Phone className="w-5 h-5" />
             </a>
-            <button className="md:hidden text-text-dark p-2 hover:bg-gray-100 rounded-full transition-colors">
-              <Menu className="w-6 h-6" />
+            <button 
+              onClick={() => setIsOpen(!isOpen)}
+              className="md:hidden text-text-dark p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Navigation Dropdown */}
+      {isOpen && (
+        <div className="md:hidden bg-white border-b border-gray-200 shadow-lg">
+          <nav className="flex flex-col p-4 space-y-3 font-semibold">
+            <Link 
+              href="/" 
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
+            >
+              Home
+            </Link>
+            <Link 
+              href="/about" 
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
+            >
+              About Us
+            </Link>
+            <Link 
+              href="/departments" 
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
+            >
+              Departments
+            </Link>
+            <Link 
+              href="/doctors" 
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
+            >
+              Doctors
+            </Link>
+            <Link 
+              href="/contact" 
+              onClick={() => setIsOpen(false)}
+              className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
+            >
+              Contact
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
