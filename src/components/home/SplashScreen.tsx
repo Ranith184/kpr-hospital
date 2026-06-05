@@ -37,14 +37,14 @@ export default function SplashScreen() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] bg-white flex items-center justify-center overflow-hidden"
+          className="fixed inset-0 z-[100] bg-[#09122c] flex items-center justify-center overflow-hidden"
         >
           <video
             autoPlay
             muted
             playsInline
             onEnded={handleVideoEnd}
-            className="w-full h-full object-contain md:object-cover bg-white"
+            className="w-full h-full object-contain md:object-cover bg-[#09122c]"
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/intro.mp4`}
           >
             Your browser does not support the video tag.
