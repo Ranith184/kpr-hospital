@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? "/kpr-hospital" : "";
+const isVercel = process.env.VERCEL === "1" || !!process.env.VERCEL;
+const basePath = (isProd && !isVercel) ? "/kpr-hospital" : "";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  // Disable static export on Vercel to allow full platform support, keep it for GitHub Pages
+  output: isVercel ? undefined : "export",
   basePath: basePath,
   images: {
     unoptimized: true,
