@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,9 +45,6 @@ export default function Navbar() {
 
           {/* CTA & Mobile Toggle */}
           <div className="flex items-center gap-5">
-            <a href="tel:+919999999999" className="md:hidden text-primary bg-blue-50 p-2 rounded-full">
-              <Phone className="w-5 h-5" />
-            </a>
             <button 
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden text-text-dark p-2 hover:bg-gray-100 rounded-full transition-colors"
