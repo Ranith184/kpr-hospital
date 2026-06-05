@@ -13,7 +13,7 @@ export default function Navbar() {
           {/* Logo Area */}
           <Link href="/" className="flex items-center transition-transform hover:scale-105 duration-300">
             <Image
-              src="/logo.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.png`}
               alt="KPR Hospital Logo"
               width={200}
               height={100}

@@ -55,7 +55,7 @@ export default function HeroSection() {
             className="relative"
           >
             <Image
-              src="/kpr.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/kpr.png`}
               alt="KPR Multispeciality Hospital"
               width={200}
               height={100}

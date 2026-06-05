@@ -39,13 +39,13 @@ export default function AboutPage() {
               </li>
             </ul>
           </div>
-          <div className="relative h-96 w-full rounded-2xl overflow-hidden border border-gray-100 shadow-sm flex items-center justify-center bg-gray-50">
+          <div className="relative h-96 w-full rounded-2xl overflow-hidden border border-gray-100 shadow-lg">
             <Image
-              src="/logoo.png"
-              alt="KPR Multispeciality Hospital Logo"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logoo.png`}
+              alt="KPR Multispeciality Hospital Building"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-contain p-8"
+              className="object-cover"
               priority
             />
           </div>
