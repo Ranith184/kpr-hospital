@@ -11,15 +11,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-sm transition-all duration-300">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-28">
           {/* Logo Area */}
           <Link href="/" className="flex items-center transition-transform hover:scale-105 duration-300">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/logo.png`}
               alt="KPR Hospital Logo"
-              width={200}
-              height={100}
-              className="w-auto h-auto max-h-100 object-contain"
+              width={220}
+              height={80}
+              className="h-24 w-auto object-contain"
               priority
             />
           </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
 
           {/* CTA & Mobile Toggle */}
           <div className="flex items-center gap-5">
-            <button 
+            <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden text-text-dark p-2 hover:bg-gray-100 rounded-full transition-colors"
               aria-label="Toggle Menu"
@@ -60,36 +60,36 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 shadow-lg">
           <nav className="flex flex-col p-4 space-y-3 font-semibold">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               onClick={() => setIsOpen(false)}
               className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
             >
               Home
             </Link>
-            <Link 
-              href="/about" 
+            <Link
+              href="/about"
               onClick={() => setIsOpen(false)}
               className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
             >
               About Us
             </Link>
-            <Link 
-              href="/departments" 
+            <Link
+              href="/departments"
               onClick={() => setIsOpen(false)}
               className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
             >
               Departments
             </Link>
-            <Link 
-              href="/doctors" 
+            <Link
+              href="/doctors"
               onClick={() => setIsOpen(false)}
               className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
             >
               Doctors
             </Link>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               onClick={() => setIsOpen(false)}
               className="px-4 py-3 rounded-xl border border-gray-100 text-primary hover:bg-primary hover:text-white transition-all duration-200"
             >
