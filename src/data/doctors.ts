@@ -17,13 +17,13 @@ export const doctors = [
     timings: "10:00 AM - 4:00 PM"
   },
   {
-    id: "dr-srinivas-reddy",
-    name: "Dr. Srinivas Reddy",
-    designation: "Head of Orthopedics",
-    qualifications: "MBBS, MS (Orthopedics), Fellowship in Joint Replacement",
+    id: "dr-vamshidhar-reddy",
+    name: "Dr. Vamshidhar Reddy",
+    designation: "Consultant Orthopedic Surgeon",
+    qualifications: "MS (Ortho)",
     experience: "12+ Years",
     departmentId: "orthopedics",
-    specialization: "Joint Replacement & Arthroscopy",
+    specialization: "Joint Replacement & Joint Care",
     languages: ["English", "Telugu"],
     expertise: [
       "Total Knee Replacement",
@@ -34,18 +34,18 @@ export const doctors = [
     timings: "9:00 AM - 2:00 PM"
   },
   {
-    id: "dr-anitha-rao",
-    name: "Dr. Anitha Rao",
-    designation: "Senior Gynecologist & Obstetrician",
-    qualifications: "MBBS, DGO, MD (OBGYN)",
-    experience: "18+ Years",
-    departmentId: "gynecology",
-    specialization: "High-Risk Pregnancy & Infertility",
+    id: "dr-geetha-reddy",
+    name: "Dr. Geetha Reddy",
+    designation: "Consultant Dermatologist & General Surgeon",
+    qualifications: "MS, DDVL",
+    experience: "10+ Years",
+    departmentId: "dermatology",
+    specialization: "Clinical & Cosmetic Dermatology, General Surgery",
     languages: ["English", "Telugu", "Hindi"],
     expertise: [
-      "High-Risk Obstetrics",
-      "Laparoscopic Surgeries",
-      "PCOS Management"
+      "Skin & Laser Treatments",
+      "General & Laparoscopic Surgery",
+      "Cosmetic Skin Procedures"
     ],
     availableDays: "Mon - Sat",
     timings: "11:00 AM - 5:00 PM"
