@@ -63,10 +63,6 @@ export default async function DoctorDetailPage({ params }: { params: Promise<{ i
                     <CheckCircle className="w-5 h-5 text-secondary" />
                     <strong>Specialization:</strong> {doc.specialization}
                   </p>
-                  <p className="flex items-center gap-3 text-text-dark">
-                    <CheckCircle className="w-5 h-5 text-secondary" />
-                    <strong>Languages:</strong> {doc.languages.join(", ")}
-                  </p>
                 </div>
               </div>
 

@@ -44,7 +44,7 @@ export default function SplashScreen() {
             muted
             playsInline
             onEnded={handleVideoEnd}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain md:object-cover bg-white"
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/intro.mp4`}
           >
             Your browser does not support the video tag.

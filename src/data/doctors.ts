@@ -1,13 +1,12 @@
 export const doctors = [
   {
-    id: "dr-ravi-kumar",
-    name: "Dr. Ravi Kumar",
+    id: "dr-kpr",
+    name: "Dr. KPR",
     designation: "Senior Consultant Cardiologist",
     qualifications: "MBBS, MD (General Medicine), DM (Cardiology)",
     experience: "15+ Years",
     departmentId: "cardiology",
     specialization: "Interventional Cardiology",
-    languages: ["English", "Telugu", "Hindi"],
     expertise: [
       "Complex Angioplasties",
       "Pacemaker Implantation",
@@ -24,7 +23,7 @@ export const doctors = [
     experience: "12+ Years",
     departmentId: "orthopedics",
     specialization: "Joint Replacement & Joint Care",
-    languages: ["English", "Telugu"],
+
     expertise: [
       "Total Knee Replacement",
       "Sports Injuries",
@@ -41,7 +40,7 @@ export const doctors = [
     experience: "10+ Years",
     departmentId: "dermatology",
     specialization: "Clinical & Cosmetic Dermatology, General Surgery",
-    languages: ["English", "Telugu", "Hindi"],
+
     expertise: [
       "Skin & Laser Treatments",
       "General & Laparoscopic Surgery",

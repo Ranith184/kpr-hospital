@@ -37,13 +37,9 @@ export default function DoctorsPage() {
                     <span className="font-semibold text-gray-500">Experience</span> 
                     <span className="font-bold text-primary">{doc.experience}</span>
                   </p>
-                  <p className="flex justify-between border-b border-gray-100 pb-2">
+                  <p className="flex justify-between pb-2">
                     <span className="font-semibold text-gray-500">Qualifications</span> 
                     <span className="font-bold text-primary text-right pl-4">{doc.qualifications}</span>
-                  </p>
-                  <p className="flex justify-between pb-2">
-                    <span className="font-semibold text-gray-500">Languages</span> 
-                    <span className="font-bold text-primary">{doc.languages.join(", ")}</span>
                   </p>
                 </div>
                 
