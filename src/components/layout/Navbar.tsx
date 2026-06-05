@@ -19,7 +19,7 @@ export default function Navbar() {
               alt="KPR Hospital Logo"
               width={220}
               height={80}
-              className="h-24 w-auto object-contain"
+              className="h-60 w-auto object-contain"
               priority
             />
           </Link>
